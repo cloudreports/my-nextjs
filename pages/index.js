@@ -15,6 +15,7 @@ export default class HomePage extends React.Component {
             <div>
                 Hello World.<br />
                 <Link href='/about'><a>About</a></Link>
+                <Link as='/bhihihi' href="pppp"><a>nonono</a></Link>
                 <h2>Country list</h2>
                 <ul>
                     {this.props.countries.map((country, i) => {
