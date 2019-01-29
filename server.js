@@ -10,6 +10,8 @@ const router = new Router();
 // Initialize NextJs instance and expose request handler
 const nextApp = next({ dev: true });
 const handler = nextApp.getRequestHandler();
+global.SERVER_APP_ROOT = __dirname;
+const dataProvider = require(SERVER_APP_ROOT + '/libs/dataProvider');
 
 (async () => {
     try {
@@ -19,10 +21,16 @@ const handler = nextApp.getRequestHandler();
             ctx.respond = false;
         });
 
+        router.get('/api/country', async ctx => {
+            ctx.body = dataProvider.countryList();
+        });
+
         router.get('*', async ctx => {
             await handler(ctx.req, ctx.res);
             ctx.respond = false;
         });
+
+        
 
         server.use(router.routes());
         server.listen(3000, _ => console.log('App running on port 3000'));
