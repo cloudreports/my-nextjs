@@ -1,5 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
+import 'isomorphic-unfetch'
+
+import CustomLink from './CustomLink'
+CustomLink.BASEDIR = '/sub'
 
 export default class AboutPage extends React.Component {
     static async getInitialProps() {
@@ -11,7 +15,7 @@ export default class AboutPage extends React.Component {
         return (
             <div>
                 About page<br />
-                <Link href='/'><a>home</a></Link>
+                <CustomLink href='/'><a>home</a></CustomLink>
                 <h2>Country codes</h2>
                 <ul>
                     {this.props.countries.map((country, i) => {
