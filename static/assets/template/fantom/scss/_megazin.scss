@@ -1,0 +1,163 @@
+/* Post Slider Area css
+============================================================================================ */
+.post_slider_area{
+	
+}
+.post_slider_inner{
+	
+}
+.post_s_item{
+	position: relative;
+	overflow: hidden;
+	.post_img{
+		position: relative;
+		&:before{
+			content: "";
+			background: rgba(42, 20, 112, .5);
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.post_text{
+		position: absolute;
+		left: 40px;
+		bottom: 50px;
+		max-width: 355px;
+		.cat{
+			display: inline-block;
+			border: 1px solid $baseColor;
+			line-height: 28px;
+			padding: 0px 18px;
+			color: #fff;
+			border-radius: 15px;
+			font-size: 12px;
+			font-family: $rob;
+			margin-bottom: 20px;
+		}
+		h4{
+			font-size: 24px;
+			font-family: $rob;
+			line-height: 30px;
+			color: #fff;
+			padding-right: 20px;
+			margin-bottom: 17px;
+			@include transition;
+			&:hover{
+				color: $baseColor;
+			}
+		}
+		p{
+			font-size: 14px;
+			line-height: 24px;
+			color: #fff;
+			margin-bottom: 22px;
+		}
+		.date{
+			a{
+				color: #fff;
+				font-size: 12px;
+				font-weight: normal;
+				font-family: $rob;
+				margin-right: 25px;
+				@include transition;
+				&:hover{
+					color: $baseColor;
+				}
+				i{
+					padding-right: 5px;
+				}
+				&:last-child{
+					margin-right: 0px;
+				}
+			}
+		}
+	}
+}
+/* End Post Slider Area css
+============================================================================================ */
+
+/* Blog Style One Area css
+============================================================================================ */
+.blog_style1{
+	margin-bottom: 40px;
+	.blog_text{
+		padding-left: 40px;
+		padding-right: 40px;
+		.blog_text_inner{
+			background: #fff;
+			margin-top: -100px;
+			position: relative;
+			box-shadow: 0px 10px 20px 0px rgba(153, 153, 153, 0.1);
+			padding: 40px;
+			.cat{
+				display: inline-block;
+				border: 1px solid $baseColor;
+				line-height: 28px;
+				padding: 0px 20px;
+				color: $pfont;
+				border-radius: 15px;
+				font-size: 12px;
+				font-family: $rob;
+				margin-bottom: 20px;
+				font-weight: 500;
+			}
+			h4{
+				font-size: 24px;
+				font-family: $rob;
+				line-height: 30px;
+				color: $dip;
+				padding-right: 20px;
+				margin-bottom: 17px;
+				@include transition;
+				&:hover{
+					color: $baseColor;
+				}
+			}
+			p{
+				font-size: 14px;
+				line-height: 24px;
+				color: $pfont;
+				margin-bottom: 22px;
+			}
+			.date{
+				a{
+					color: $pfont;
+					font-size: 12px;
+					font-weight: normal;
+					font-family: $rob;
+					margin-right: 25px;
+					@include transition;
+					&:hover{
+						color: $baseColor;
+					}
+					i{
+						padding-right: 5px;
+					}
+					&:last-child{
+						margin-right: 0px;
+					}
+				}
+			}
+		}
+	}
+	&.small{
+		.blog_text{
+			.blog_text_inner{
+				margin-top: -50px;
+				h4{
+					font-size: 18px;
+					line-height: 26px;
+					padding-right: 0px;
+				}
+			}
+		}
+	}
+}
+.row.m0.post_cat_item{
+	margin-bottom: 40px;
+}
+/* End Blog Style One Area css
+============================================================================================ */
