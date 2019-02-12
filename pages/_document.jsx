@@ -12,6 +12,7 @@ export default class MyDocument extends Document {
         return (
             <html>
                 <Head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
                     <link rel="stylesheet" href="/static/assets/template/fantom/css/bootstrap.css" />
                     <link rel="stylesheet" href="/static/assets/template/fantom/vendors/linericon/style.css" />
                     <link rel="stylesheet" href="/static/assets/template/fantom/css/font-awesome.min.css" />
@@ -30,6 +31,14 @@ export default class MyDocument extends Document {
                     <style dangerouslySetInnerHTML={{__html: `.owl-carousel {display: block;}.post_slider_inner.owl-carousel > .item {
                         display: inline-block;
                         width: 25%;
+                    }
+                    @media (max-width:767px){
+                        .post_slider_inner.owl-carousel > .item {
+                            width: 100%
+                        }
+                        .post_slider_inner.owl-carousel > .item:not(:first-of-type) {
+                            display: none;
+                        }
                     }`}}></style>
                 </body>
             </html>
